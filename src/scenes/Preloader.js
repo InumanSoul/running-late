@@ -28,6 +28,10 @@ export class Preloader extends Scene
         this.load.image('layer-7', 'assets/game/bg/Day/PixelTown_Day_layer07.png');
         this.load.image('layer-9', 'assets/game/bg/Day/PixelTown_Day_layer09.png');
 
+        this.load.spritesheet('bird-1', 'assets/game/animals/bird-1/Walk.png', {
+            frameWidth: 32, frameHeight: 32
+        });
+
         this.load.spritesheet('player', 'assets/game/employee.png', {
             frameWidth: 50, frameHeight: 50
         });

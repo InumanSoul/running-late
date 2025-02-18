@@ -16,10 +16,22 @@ export class GameOver extends Scene
             align: 'center'
         }).setOrigin(0.5);
 
-        this.input.once('pointerdown', () => {
+        this.add.text(512/2, 240, `You're fired!`, {
+            fontFamily: 'PixeloidMono', fontSize: 18, color: '#ffffff',
+            align: 'center'
+        }).setOrigin(0.5);
 
+        this.restartText = this.add.text(512/2, 290, 'Click to restart', {
+            fontFamily: 'PixeloidMono', fontSize: 10, color: '#ffffff',
+            align: 'center'
+        }).setOrigin(0.5);
+
+        this.input.keyboard.once('keydown-ENTER', () => {
             this.scene.start('MainMenu');
+        });
 
+        this.input.once('pointerdown', () => {
+            this.scene.start('MainMenu');
         });
     }
 }

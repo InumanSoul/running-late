@@ -11,6 +11,7 @@ export const config = {
     width: 512,
     height: 448,
     parent: 'game-container',
+    pixelArt: true,
     dom: {
         createContainer: true,
     },
